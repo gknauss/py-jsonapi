@@ -188,10 +188,10 @@ class Schema(jsonapi.base.schema.Schema):
         derived from the resource class.
     """
 
-    def __init__(self, resource_class):
+    def __init__(self, resource_class, typename=None):
         """
         """
-        super().__init__(resource_class)
+        super().__init__(resource_class, typename)
         self.find_sqlalchemy_markers()
         return None
 
